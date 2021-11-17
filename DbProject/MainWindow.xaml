@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button Name="btnCheck"  Content="Check" Width="120" Height="35" Click="btnCheck_Click"/> 
+
     </Grid>
 </Window>

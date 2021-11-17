@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace DbProject
 {
     /// <summary>
@@ -23,6 +24,22 @@ namespace DbProject
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnCheck_Click(object sender, RoutedEventArgs e)
+        {
+
+            Global global = new Global();
+
+           if (!String.IsNullOrEmpty(global.CheckConnection()))
+           {
+                MessageBox.Show("Подключение прошло успешно! ");
+            }
+           else
+            {
+                MessageBox.Show("Подключение не удалось!");
+            }
+
         }
     }
 }
